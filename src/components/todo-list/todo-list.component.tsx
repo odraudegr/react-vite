@@ -1,32 +1,20 @@
 import React from "react";
+import { staticData } from "../../data/items";
 import { ItemProps } from "../../types/todo-item";
 import TodoItem from "../todo-item/todo.item.component";
 
-const data: ItemProps[] = [
-  {
-    description: "Item 1",
-    id: 1,
-    status: "inProgress"
-  },
-  {
-    description: "Item 2",
-    id: 2,
-    status: "done"
-  },
-  {
-    description: "Item 3",
-    id: 3,
-    status: "inProgress"
-  }
-];
+type Props = {
+  data: Array<ItemProps>;
+}
 
-const TodoList = () =>
+const TodoList = ({ data }: Props) =>
+
   <React.Fragment>
     {data.map((item) => (
-      <>
+      <React.Fragment key={item.id}>
         <TodoItem item={item} />
       <br/>
-      </>
+      </React.Fragment>
     ))}
   </React.Fragment>
 ;
