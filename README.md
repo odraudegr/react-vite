@@ -19,11 +19,11 @@ npm install
 ### Dev Serve
 
 ```bash
-yarn serve
+yarn run serve
 ```
 or
 ```bash
-npm yarn dev
+npm run serve
 ```
 
 ## License
