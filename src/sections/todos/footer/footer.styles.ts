@@ -12,12 +12,12 @@ export const Wrapper = styled.button`
 
 export const AddIcon = styled(AddCircleOutlineIcon)`
   color: #3D82EB;
-  widht: 12px;
-  height: 12px;
+  widht: 22px;
+  height: 22px;
 `
 
 export const AddText = styled.span`
   color: #3D82EB;
-  font-size: 10px;
+  font-size: 20px;
   padding: 0 12px;
 `

@@ -31,7 +31,7 @@ const NavBar = () => {
         height: '40px',
       }}
     >
-      <AppBar position="static">
+      <AppBar position="static" sx={{backgroundColor: "transparent"}}>
         <Toolbar style={{ minHeight: 'fit-content' }}>
           <IconButton onClick={navigateHome} sx={{ mr: 2 }}>
             <HomeIcon sx={{ color: "white" }} />

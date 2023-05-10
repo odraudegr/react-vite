@@ -4,7 +4,6 @@ import { ButtonContainer, IconRemove, TodoDescription, Wrapper } from "./todo-it
 import { useDispatch } from "react-redux";
 import { ItemProps, ItemStatus } from "@/types/todo-item";
 import { todoActions } from "@/slices/todos/todoSlice";
-import { Types } from "@/reducer/actions";
 
 type Props = {
   item: ItemProps;
@@ -20,7 +19,7 @@ const TodoItem = ({ item }: Props) => {
   }
 
   const handleSelectItem = () => {
-    dispatch({ type: Types.Select, payload: item.id });
+    dispatch(todoActions.select(item.id));
   }
 
   return (

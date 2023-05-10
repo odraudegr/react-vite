@@ -51,6 +51,25 @@ const todoSlice = createSlice({
     add: (state, action: PayloadAction<ItemProps>) => {
       state.data.push(action.payload);
     },
+    select: (state, action: PayloadAction<string>) => {
+      const selectItemIndex = state.data.findIndex(item => item.id === action.payload);
+      return {
+        ...state,
+        activeItem: state.data[selectItemIndex]
+      };
+    },
+    update: (state, action: PayloadAction<{id:string, dataUpdated:Partial<ItemProps>}>) => {
+      const selectItemIndex = state.data.findIndex(item => item.id === action.payload.id);
+      return {
+        ...state,
+        data: [
+          ...state.data.slice(0, selectItemIndex),
+          { ...state.data[selectItemIndex], ...action.payload.dataUpdated },
+          ...state.data.slice(selectItemIndex + 1),
+        ],
+        activeItem: null,
+      };
+    },
     remove: (state, action: PayloadAction<string>) => {
       const selectItemIndex = state.data.findIndex(item => item.id === action.payload);
       state.data.splice(selectItemIndex, 1);

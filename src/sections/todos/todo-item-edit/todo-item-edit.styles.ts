@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 
 export const CustomTextField = styled(TextField)`
   input {
-    font-size: 9px;
+    font-size: 20px;
     padding: 2px 10px;
   }
 `

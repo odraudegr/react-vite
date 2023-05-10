@@ -16,9 +16,9 @@ const HomePage = React.lazy(() => import("@/pages/home/home-page"));
 const TodosPage = React.lazy(() => import("@/pages/todos/todos-page"));
 const ConfigPage = React.lazy(() => import("@/pages/config/config-page"));
 const LoginPage = React.lazy(() => import("@/pages/auth/login-page"));
-const NotFoundPage = React.lazy(
-  () => import("@/pages/not-found/not-found-page")
-);
+const SignupPage = React.lazy(() => import("@/pages/auth/register/auth-signup-page"));
+const ResetPasswordPage = React.lazy(() => import("@/pages/auth/reset-pass/auth-reset-pass-page"));
+const NotFoundPage = React.lazy(() => import("@/pages/not-found/not-found-page"));
 
 const AppRoutes = () => {
   return (
@@ -60,6 +60,22 @@ const AppRoutes = () => {
           element={
             <Suspense fallback={<LoadingPageIndicator />}>
               <LoginPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/auth/signup"
+          element={
+            <Suspense fallback={<LoadingPageIndicator />}>
+              <SignupPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/auth/resetpassword"
+          element={
+            <Suspense fallback={<LoadingPageIndicator />}>
+              <ResetPasswordPage />
             </Suspense>
           }
         />
