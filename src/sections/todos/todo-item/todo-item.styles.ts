@@ -16,19 +16,19 @@ export const Wrapper = styled.div`
 `;
 
 export const TodoDescription = styled.div`
-  font-size: 10px;
+  font-size: 20px;
   flex-grow: 1;
 `;
 
 export const ButtonContainer = styled(IconButton)`
-  width: 12px;
-  height: 12px;
+  width: 22px;
+  height: 22px;
   color: red;
   display: none;
 `;
 
 export const IconRemove = styled(MuiIconRemove)`
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
 `;
 

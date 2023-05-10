@@ -9,13 +9,22 @@ type StateProps = {
   data: Array<ItemProps>;
   activeItem: ItemProps | null;
   loading: boolean;
-}
+};
 
 class TodoContainer extends React.Component<{}, StateProps> {
   render() {
     return (
-      <Container maxWidth="xs">
-        <Header title="Todos"/>
+      <Container
+        sx={{
+          position: "fixed",
+          top: 120,
+          right: 20,
+          borderRadius: 2,
+          backgroundColor: "#e6f7f7",
+          width: "50%"
+        }}
+      >
+        <Header title="Todos" />
         <TodoList />
         <Footer />
       </Container>

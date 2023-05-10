@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import TodoContainer from "@/sections/todos/todo-container/todo-container.component";
 import { store } from "@/store/store";
 import NavBar from "@/components/nav/navbar.component";
+import '../home/home-page-style.css'
 
 const TodosPage = () => {
   return (

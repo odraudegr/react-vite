@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/system";
+import { Box, Typography } from "@mui/material";
 
 type Props = {
   title: string;
@@ -8,7 +8,7 @@ type Props = {
 const Header = ({ title }: Props) => {
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
-      <h3 style={{ margin: 0 }} >{title}</h3>
+      <Typography sx={{ margin: 0 }} >{title}</Typography>
     </Box>
   );
 };

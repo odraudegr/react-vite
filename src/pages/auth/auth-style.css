@@ -10,7 +10,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: darkgrey;
+  background-image: url("https://img.freepik.com/free-photo/digital-circle-circuit-blue-background-futuristic-technology_53876-124643.jpg?w=1380&t=st=1683170623~exp=1683171223~hmac=ba43fa18d0655b042a0fb99de42bbf67a1666c6fa90111066d19c34e65bb28c8");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .box {
@@ -21,104 +25,6 @@ body {
   background-color: #1c1c1c;
   border-radius: 8px;
   overflow: hidden;
-}
-
-.box::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  background: linear-gradient(
-    0deg,
-    transparent,
-    transparent,
-    #45f3ff,
-    #45f3ff,
-    #45f3ff
-  );
-  z-index: 1;
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-}
-
-.box::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  background: linear-gradient(
-    0deg,
-    transparent,
-    transparent,
-    #45f3ff,
-    #45f3ff,
-    #45f3ff
-  );
-  z-index: 1;
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  animation-delay: -3s;
-}
-
-.borderLine {
-  position: absolute;
-  top: 0;
-  inset: 0;
-}
-
-.borderLine::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  background: linear-gradient(
-    0deg,
-    transparent,
-    transparent,
-    #FF2770,
-    #FF2770,
-    #FF2770
-  );
-  z-index: 1;
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  animation-delay: -1.5s;
-}
-
-.borderLine::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  background: linear-gradient(
-    0deg,
-    transparent,
-    transparent,
-    #FF2770,
-    #FF2770,
-    #FF2770
-  );
-  z-index: 1;
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  animation-delay: -4.5s;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .box form {
@@ -223,7 +129,8 @@ body {
   border-radius: 4px;
   font-weight: 600;
   width: 100px;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: 100px;
 }
 
 .box form input[type="submit"]:active {
