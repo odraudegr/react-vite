@@ -23,7 +23,7 @@ const TodoList = ({}: Props) => {
     <React.Fragment>
       {loading &&
       <Box textAlign="center">
-        <CircularProgress size={10} />
+        <CircularProgress size={20} />
       </Box>
       }
       {data.map((item: ItemProps) => (

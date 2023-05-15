@@ -1,7 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material";
 import {useNavigate} from 'react-router-dom';
-import './auth-style.css'
+import './auth-style.css';
+import "../home/home-page-style.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
