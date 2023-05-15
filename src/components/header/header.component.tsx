@@ -8,7 +8,7 @@ type Props = {
 const Header = ({ title }: Props) => {
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
-      <Typography sx={{ margin: 0 }} >{title}</Typography>
+      <Typography sx={{ mb: 5, ml: 5, fontSize: "2em", fontWeight: "bold"  }} >{title}</Typography>
     </Box>
   );
 };
